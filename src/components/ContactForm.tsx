@@ -15,11 +15,11 @@ type FormState = 'idle' | 'loading' | 'success' | 'error'
 const labelStyle: React.CSSProperties = {
   display: 'block',
   fontFamily: 'var(--font-inter)',
-  fontSize: '12px',
+  fontSize: '11px',
   fontWeight: 600,
-  letterSpacing: '0.06em',
+  letterSpacing: '0.08em',
   textTransform: 'uppercase',
-  color: '#5C5C52',
+  color: 'rgba(240,236,228,0.45)',
   marginBottom: '8px',
 }
 
@@ -66,8 +66,8 @@ export default function ContactForm({ successMessage }: { successMessage?: strin
       <div
         style={{
           padding: '2.5rem',
-          backgroundColor: '#FAFAF5',
-          border: '1px solid #D8D4C8',
+          backgroundColor: 'rgba(179,255,107,0.06)',
+          border: '1px solid rgba(179,255,107,0.2)',
           borderRadius: '10px',
           textAlign: 'center',
         }}
@@ -77,7 +77,8 @@ export default function ContactForm({ successMessage }: { successMessage?: strin
             width: '44px',
             height: '44px',
             borderRadius: '50%',
-            backgroundColor: '#E6F4EC',
+            backgroundColor: 'rgba(179,255,107,0.12)',
+            border: '1px solid rgba(179,255,107,0.3)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -85,7 +86,7 @@ export default function ContactForm({ successMessage }: { successMessage?: strin
           }}
         >
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <path d="M4 10l4.5 4.5L16 6" stroke="#1A6B3C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M4 10l4.5 4.5L16 6" stroke="#B3FF6B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </div>
         <p
@@ -93,13 +94,13 @@ export default function ContactForm({ successMessage }: { successMessage?: strin
             fontFamily: 'var(--font-inter)',
             fontSize: '15px',
             fontWeight: 600,
-            color: '#1A1A1A',
+            color: '#F0ECE4',
             marginBottom: '0.5rem',
           }}
         >
           Mesajınız alındı.
         </p>
-        <p style={{ fontFamily: 'var(--font-inter)', fontSize: '13.5px', color: '#5C5C52' }}>
+        <p style={{ fontFamily: 'var(--font-inter)', fontSize: '13.5px', color: 'rgba(240,236,228,0.5)' }}>
           {successMessage || 'En kısa sürede dönüş yapacağız.'}
         </p>
       </div>
@@ -112,7 +113,7 @@ export default function ContactForm({ successMessage }: { successMessage?: strin
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
         <div>
           <label style={labelStyle}>
-            Ad Soyad <span style={{ color: '#D8D4C8' }}>*</span>
+            Ad Soyad <span style={{ color: 'rgba(240,236,228,0.2)' }}>*</span>
           </label>
           <input
             type="text"
@@ -124,7 +125,7 @@ export default function ContactForm({ successMessage }: { successMessage?: strin
         </div>
         <div>
           <label style={labelStyle}>
-            E-posta <span style={{ color: '#D8D4C8' }}>*</span>
+            E-posta <span style={{ color: 'rgba(240,236,228,0.2)' }}>*</span>
           </label>
           <input
             type="email"
@@ -139,7 +140,10 @@ export default function ContactForm({ successMessage }: { successMessage?: strin
       {/* Telefon */}
       <div>
         <label style={labelStyle}>
-          Telefon <span style={{ fontSize: '10px', fontWeight: 400, letterSpacing: 0, textTransform: 'none', color: '#B5B0A8' }}>(opsiyonel)</span>
+          Telefon{' '}
+          <span style={{ fontSize: '10px', fontWeight: 400, letterSpacing: 0, textTransform: 'none', color: 'rgba(240,236,228,0.25)' }}>
+            (opsiyonel)
+          </span>
         </label>
         <input
           type="tel"
@@ -167,7 +171,7 @@ export default function ContactForm({ successMessage }: { successMessage?: strin
       {/* Mesaj */}
       <div>
         <label style={labelStyle}>
-          Mesaj <span style={{ color: '#D8D4C8' }}>*</span>
+          Mesaj <span style={{ color: 'rgba(240,236,228,0.2)' }}>*</span>
         </label>
         <textarea
           name="message"
@@ -187,9 +191,10 @@ export default function ContactForm({ successMessage }: { successMessage?: strin
           style={{
             fontFamily: 'var(--font-inter)',
             fontSize: '13px',
-            color: '#B91C1C',
+            color: '#F87171',
             padding: '10px 14px',
-            backgroundColor: '#FEE2E2',
+            backgroundColor: 'rgba(248,113,113,0.1)',
+            border: '1px solid rgba(248,113,113,0.2)',
             borderRadius: '6px',
           }}
         >
@@ -201,7 +206,7 @@ export default function ContactForm({ successMessage }: { successMessage?: strin
         <button
           type="submit"
           disabled={formState === 'loading'}
-          className="btn-primary"
+          className="btn-lime"
           style={{
             opacity: formState === 'loading' ? 0.65 : 1,
             cursor: formState === 'loading' ? 'not-allowed' : 'pointer',

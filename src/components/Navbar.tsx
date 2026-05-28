@@ -32,10 +32,10 @@ export default function Navbar() {
     <header
       className="sticky top-0 z-50"
       style={{
-        backgroundColor: scrolled ? 'rgba(247,244,236,0.90)' : '#F7F4EC',
-        backdropFilter: scrolled ? 'blur(20px) saturate(160%)' : 'none',
-        WebkitBackdropFilter: scrolled ? 'blur(20px) saturate(160%)' : 'none',
-        borderBottom: '1px solid #D8D4C8',
+        backgroundColor: scrolled ? 'rgba(13,13,13,0.92)' : '#0D0D0D',
+        backdropFilter: scrolled ? 'blur(20px) saturate(180%)' : 'none',
+        WebkitBackdropFilter: scrolled ? 'blur(20px) saturate(180%)' : 'none',
+        borderBottom: '1px solid rgba(255,255,255,0.06)',
         transition: 'background-color 250ms ease, backdrop-filter 250ms ease',
       }}
     >
@@ -49,7 +49,7 @@ export default function Navbar() {
           }}
         >
           <Link href="/" aria-label="Klasik Ajans Ana Sayfa" style={{ display: 'flex', alignItems: 'center' }}>
-            <LogoKlasik size="md" />
+            <LogoKlasik size="md" variant="light" />
           </Link>
 
           {/* Desktop menü */}
@@ -75,17 +75,17 @@ export default function Navbar() {
                       fontSize: '13.5px',
                       fontWeight: isActive ? 600 : 450,
                       letterSpacing: '0.025em',
-                      color: isActive ? '#1A1A1A' : '#5C5C52',
+                      color: isActive ? '#F0ECE4' : 'rgba(240,236,228,0.55)',
                       textDecoration: 'none',
                       position: 'relative',
                       paddingBottom: '3px',
                       transition: 'color 150ms ease',
                     }}
                     onMouseEnter={(e) => {
-                      if (!isActive) (e.currentTarget as HTMLAnchorElement).style.color = '#1A1A1A'
+                      if (!isActive) (e.currentTarget as HTMLAnchorElement).style.color = '#F0ECE4'
                     }}
                     onMouseLeave={(e) => {
-                      if (!isActive) (e.currentTarget as HTMLAnchorElement).style.color = '#5C5C52'
+                      if (!isActive) (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(240,236,228,0.55)'
                     }}
                   >
                     {link.label}
@@ -96,7 +96,7 @@ export default function Navbar() {
                         left: 0,
                         width: isActive ? '100%' : '0',
                         height: '1.5px',
-                        backgroundColor: '#1A1A1A',
+                        backgroundColor: '#B3FF6B',
                         transition: 'width 220ms cubic-bezier(0.22, 1, 0.36, 1)',
                         borderRadius: '1px',
                       }}
@@ -108,7 +108,7 @@ export default function Navbar() {
             <li>
               <Link
                 href="/iletisim"
-                className="btn-primary"
+                className="btn-lime"
                 style={{ padding: '0.5rem 1.2rem', fontSize: '13px', borderRadius: '6px' }}
               >
                 Projeyi Konuşalım
@@ -138,7 +138,7 @@ export default function Navbar() {
                   display: 'block',
                   width: '22px',
                   height: '1.5px',
-                  backgroundColor: '#1A1A1A',
+                  backgroundColor: '#F0ECE4',
                   borderRadius: '1px',
                   transition: 'transform 220ms ease, opacity 200ms ease',
                   transform:
@@ -158,8 +158,8 @@ export default function Navbar() {
       {/* Mobil drawer */}
       <div
         style={{
-          backgroundColor: '#F7F4EC',
-          borderTop: '1px solid #D8D4C8',
+          backgroundColor: '#0D0D0D',
+          borderTop: '1px solid rgba(255,255,255,0.06)',
           overflow: 'hidden',
           maxHeight: menuOpen ? '360px' : '0',
           transition: 'max-height 320ms cubic-bezier(0.22, 1, 0.36, 1)',
@@ -186,7 +186,7 @@ export default function Navbar() {
                   fontFamily: 'var(--font-inter)',
                   fontSize: '16px',
                   fontWeight: pathname === link.href ? 600 : 400,
-                  color: pathname === link.href ? '#1A1A1A' : '#5C5C52',
+                  color: pathname === link.href ? '#F0ECE4' : 'rgba(240,236,228,0.55)',
                   textDecoration: 'none',
                   letterSpacing: '0.01em',
                 }}
@@ -196,7 +196,7 @@ export default function Navbar() {
             </li>
           ))}
           <li style={{ paddingTop: '0.5rem' }}>
-            <Link href="/iletisim" className="btn-primary" style={{ display: 'inline-block' }}>
+            <Link href="/iletisim" className="btn-lime" style={{ display: 'inline-block' }}>
               Projeyi Konuşalım
             </Link>
           </li>

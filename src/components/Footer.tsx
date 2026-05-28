@@ -19,7 +19,7 @@ const services = [
 
 export default function Footer() {
   return (
-    <footer style={{ backgroundColor: '#1A1A1A', color: '#F7F4EC' }}>
+    <footer style={{ backgroundColor: '#080808', color: '#F0ECE4', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
       <div className="container" style={{ paddingTop: '4rem', paddingBottom: '3rem' }}>
         <div
           style={{
@@ -37,7 +37,7 @@ export default function Footer() {
               style={{
                 fontFamily: 'var(--font-inter)',
                 fontSize: '13.5px',
-                color: 'rgba(247,244,236,0.55)',
+                color: 'rgba(240,236,228,0.4)',
                 lineHeight: 1.7,
                 marginTop: '1rem',
                 maxWidth: '240px',
@@ -52,13 +52,13 @@ export default function Footer() {
                 fontFamily: 'var(--font-inter)',
                 fontSize: '13px',
                 fontWeight: 500,
-                color: 'rgba(247,244,236,0.75)',
+                color: 'rgba(240,236,228,0.55)',
                 textDecoration: 'none',
                 marginTop: '1rem',
                 transition: 'color 150ms ease',
               }}
-              onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#F7F4EC' }}
-              onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(247,244,236,0.75)' }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#B3FF6B' }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(240,236,228,0.55)' }}
             >
               info@klasikajans.com
             </a>
@@ -73,7 +73,7 @@ export default function Footer() {
                 fontWeight: 600,
                 letterSpacing: '0.14em',
                 textTransform: 'uppercase',
-                color: 'rgba(247,244,236,0.4)',
+                color: 'rgba(240,236,228,0.25)',
                 marginBottom: '1rem',
               }}
             >
@@ -87,12 +87,12 @@ export default function Footer() {
                     style={{
                       fontFamily: 'var(--font-inter)',
                       fontSize: '13.5px',
-                      color: 'rgba(247,244,236,0.65)',
+                      color: 'rgba(240,236,228,0.45)',
                       textDecoration: 'none',
                       transition: 'color 150ms ease',
                     }}
-                    onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#F7F4EC' }}
-                    onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(247,244,236,0.65)' }}
+                    onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#F0ECE4' }}
+                    onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(240,236,228,0.45)' }}
                   >
                     {link.label}
                   </Link>
@@ -110,7 +110,7 @@ export default function Footer() {
                 fontWeight: 600,
                 letterSpacing: '0.14em',
                 textTransform: 'uppercase',
-                color: 'rgba(247,244,236,0.4)',
+                color: 'rgba(240,236,228,0.25)',
                 marginBottom: '1rem',
               }}
             >
@@ -124,12 +124,12 @@ export default function Footer() {
                     style={{
                       fontFamily: 'var(--font-inter)',
                       fontSize: '13.5px',
-                      color: 'rgba(247,244,236,0.65)',
+                      color: 'rgba(240,236,228,0.45)',
                       textDecoration: 'none',
                       transition: 'color 150ms ease',
                     }}
-                    onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#F7F4EC' }}
-                    onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(247,244,236,0.65)' }}
+                    onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#F0ECE4' }}
+                    onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(240,236,228,0.45)' }}
                   >
                     {s}
                   </Link>
@@ -143,7 +143,7 @@ export default function Footer() {
           style={{
             marginTop: '3rem',
             paddingTop: '1.5rem',
-            borderTop: '1px solid rgba(247,244,236,0.1)',
+            borderTop: '1px solid rgba(255,255,255,0.06)',
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
@@ -155,7 +155,7 @@ export default function Footer() {
             style={{
               fontFamily: 'var(--font-inter)',
               fontSize: '12px',
-              color: 'rgba(247,244,236,0.35)',
+              color: 'rgba(240,236,228,0.2)',
             }}
           >
             © {new Date().getFullYear()} Klasik Ajans. Tüm hakları saklıdır.
@@ -164,7 +164,7 @@ export default function Footer() {
             style={{
               fontFamily: 'var(--font-inter)',
               fontSize: '11px',
-              color: 'rgba(247,244,236,0.25)',
+              color: 'rgba(240,236,228,0.15)',
               letterSpacing: '0.04em',
             }}
           >

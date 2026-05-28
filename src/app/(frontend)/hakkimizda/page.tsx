@@ -11,25 +11,29 @@ const principles = [
     num: '01',
     title: 'Az toplantı.',
     body: 'İş tarifini anlıyoruz, üretime geçiyoruz. Uzun brief süreçleri ve sunum döngüleri yerine net bir başlangıç, hızlı bir üretim.',
-    color: '#1A6B3C',
+    color: '#4ADE80',
+    border: 'rgba(74,222,128,0.2)',
   },
   {
     num: '02',
     title: 'Net iletişim.',
     body: 'Ne yapacağımızı, ne zaman teslim edeceğimizi söyleriz. Sizi tahmin yürütmek zorunda bırakmayız.',
-    color: '#1B3FC4',
+    color: '#60A5FA',
+    border: 'rgba(96,165,250,0.2)',
   },
   {
     num: '03',
     title: 'Zamanında teslim.',
     body: 'Bu bir taahhüt. Tarih söylediysek, o tarihte teslim ederiz.',
-    color: '#6B21A8',
+    color: '#A78BFA',
+    border: 'rgba(167,139,250,0.2)',
   },
   {
     num: '04',
     title: 'Süs değil, sonuç.',
     body: 'Her iş bir problemi çözer. Güzel görünmek değil, işe yaramak birincil kriterimiz.',
-    color: '#B91C1C',
+    color: '#F87171',
+    border: 'rgba(248,113,113,0.2)',
   },
 ]
 
@@ -37,16 +41,29 @@ export default function HakkimizdaPage() {
   return (
     <>
       {/* Sayfa başlığı */}
-      <section className="section-sm" style={{ backgroundColor: '#E8E3D4' }}>
+      <section className="section-sm" style={{ backgroundColor: '#111111' }}>
         <div className="container">
-          <h1 style={{ color: '#1A1A1A' }}>Hakkımızda</h1>
+          <p
+            style={{
+              fontFamily: 'var(--font-inter)',
+              fontSize: '11px',
+              fontWeight: 600,
+              letterSpacing: '0.14em',
+              textTransform: 'uppercase',
+              color: '#B3FF6B',
+              marginBottom: '0.75rem',
+            }}
+          >
+            Biz kimiz
+          </p>
+          <h1 style={{ color: '#F0ECE4' }}>Hakkımızda</h1>
         </div>
       </section>
 
-      <hr className="divider" />
+      <div className="divider" />
 
       {/* Ana metin */}
-      <section className="section" style={{ backgroundColor: '#F7F4EC' }}>
+      <section className="section" style={{ backgroundColor: '#0D0D0D' }}>
         <div className="container">
           <div
             style={{
@@ -57,10 +74,10 @@ export default function HakkimizdaPage() {
             }}
           >
             <div>
-              <h2 style={{ color: '#1A1A1A', marginBottom: '1.5rem', maxWidth: '340px' }}>
+              <h2 style={{ color: '#F0ECE4', marginBottom: '1.5rem', maxWidth: '340px' }}>
                 İşi büyütmeden çözen bir ajans.
               </h2>
-              <div style={{ color: '#5C5C52', fontSize: '1rem', lineHeight: 1.8 }}>
+              <div style={{ color: 'rgba(240,236,228,0.6)', fontSize: '1rem', lineHeight: 1.8 }}>
                 <p>
                   Klasik Ajans, işi büyütmeden çözen sade bir reklam ajansı. Gereksiz toplantılar, uzun sunumlar ve karmaşık süreçler yerine; net iletişim, hızlı üretim ve düzgün teslimatla çalışır.
                 </p>
@@ -76,7 +93,8 @@ export default function HakkimizdaPage() {
             {/* Slogan kutusu */}
             <div
               style={{
-                backgroundColor: '#1A1A1A',
+                backgroundColor: '#111111',
+                border: '1px solid rgba(179,255,107,0.15)',
                 borderRadius: '12px',
                 padding: '2.5rem',
                 display: 'flex',
@@ -89,10 +107,11 @@ export default function HakkimizdaPage() {
                   fontFamily: 'var(--font-inter)',
                   fontSize: '11px',
                   fontWeight: 600,
-                  color: 'rgba(247,244,236,0.5)',
+                  color: '#B3FF6B',
                   letterSpacing: '0.12em',
                   textTransform: 'uppercase',
                   marginBottom: '1rem',
+                  opacity: 0.8,
                 }}
               >
                 Klasik Ajans
@@ -102,20 +121,20 @@ export default function HakkimizdaPage() {
                   fontFamily: 'var(--font-playfair)',
                   fontSize: 'clamp(1.8rem, 4vw, 2.5rem)',
                   fontWeight: 700,
-                  color: '#F7F4EC',
+                  color: '#F0ECE4',
                   lineHeight: 1.2,
                   letterSpacing: '0.02em',
                 }}
               >
                 Az laf,
                 <br />
-                çok iş.
+                <em>çok iş<span style={{ color: '#B3FF6B' }}>.</span></em>
               </div>
               <div
                 style={{
                   marginTop: '2rem',
                   paddingTop: '1.5rem',
-                  borderTop: '1px solid rgba(247,244,236,0.12)',
+                  borderTop: '1px solid rgba(255,255,255,0.07)',
                   display: 'flex',
                   flexDirection: 'column',
                   gap: '10px',
@@ -124,7 +143,7 @@ export default function HakkimizdaPage() {
                 {[
                   { label: 'Kuruluş', val: 'İstanbul' },
                   { label: 'Hizmet', val: '4 alan' },
-                  { label: 'Markalar', val: '9+' },
+                  { label: 'Markalar', val: '14+' },
                 ].map((item) => (
                   <div
                     key={item.label}
@@ -137,7 +156,7 @@ export default function HakkimizdaPage() {
                       style={{
                         fontFamily: 'var(--font-inter)',
                         fontSize: '12px',
-                        color: 'rgba(247,244,236,0.45)',
+                        color: 'rgba(240,236,228,0.35)',
                       }}
                     >
                       {item.label}
@@ -147,7 +166,7 @@ export default function HakkimizdaPage() {
                         fontFamily: 'var(--font-inter)',
                         fontSize: '12px',
                         fontWeight: 500,
-                        color: 'rgba(247,244,236,0.8)',
+                        color: 'rgba(240,236,228,0.75)',
                       }}
                     >
                       {item.val}
@@ -160,12 +179,25 @@ export default function HakkimizdaPage() {
         </div>
       </section>
 
-      <hr className="divider" />
+      <div className="divider" />
 
       {/* Prensipler */}
-      <section className="section" style={{ backgroundColor: '#E8E3D4' }}>
+      <section className="section" style={{ backgroundColor: '#111111' }}>
         <div className="container">
-          <h2 style={{ color: '#1A1A1A', marginBottom: '2.5rem' }}>Nasıl Çalışıyoruz</h2>
+          <p
+            style={{
+              fontFamily: 'var(--font-inter)',
+              fontSize: '11px',
+              fontWeight: 600,
+              letterSpacing: '0.14em',
+              textTransform: 'uppercase',
+              color: '#B3FF6B',
+              marginBottom: '0.75rem',
+            }}
+          >
+            Yaklaşımımız
+          </p>
+          <h2 style={{ color: '#F0ECE4', marginBottom: '2.5rem' }}>Nasıl Çalışıyoruz</h2>
           <div
             style={{
               display: 'grid',
@@ -177,11 +209,12 @@ export default function HakkimizdaPage() {
               <div
                 key={p.num}
                 style={{
-                  backgroundColor: '#FAFAF5',
-                  border: '1px solid #D8D4C8',
+                  backgroundColor: '#171717',
+                  border: `1px solid ${p.border}`,
                   borderRadius: '10px',
                   padding: '1.5rem',
                   borderTop: `3px solid ${p.color}`,
+                  transition: 'transform 220ms ease',
                 }}
               >
                 <div
@@ -192,6 +225,7 @@ export default function HakkimizdaPage() {
                     color: p.color,
                     letterSpacing: '0.1em',
                     marginBottom: '0.5rem',
+                    opacity: 0.75,
                   }}
                 >
                   {p.num}
@@ -200,7 +234,7 @@ export default function HakkimizdaPage() {
                   style={{
                     fontFamily: 'var(--font-playfair)',
                     fontSize: '1.2rem',
-                    color: '#1A1A1A',
+                    color: '#F0ECE4',
                     marginBottom: '0.6rem',
                   }}
                 >
@@ -210,7 +244,7 @@ export default function HakkimizdaPage() {
                   style={{
                     fontFamily: 'var(--font-inter)',
                     fontSize: '13px',
-                    color: '#5C5C52',
+                    color: 'rgba(240,236,228,0.55)',
                     lineHeight: 1.65,
                   }}
                 >
@@ -223,8 +257,8 @@ export default function HakkimizdaPage() {
       </section>
 
       {/* CTA */}
-      <hr className="divider" />
-      <section className="section-sm" style={{ backgroundColor: '#F7F4EC' }}>
+      <div className="divider" />
+      <section className="section-sm" style={{ backgroundColor: '#0D0D0D' }}>
         <div className="container">
           <div
             style={{
@@ -240,17 +274,17 @@ export default function HakkimizdaPage() {
                 style={{
                   fontFamily: 'var(--font-playfair)',
                   fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)',
-                  color: '#1A1A1A',
+                  color: '#F0ECE4',
                   margin: 0,
                 }}
               >
                 Bir projeniz mi var?
               </h3>
-              <p style={{ color: '#5C5C52', fontSize: '14px', marginTop: '6px' }}>
+              <p style={{ color: 'rgba(240,236,228,0.45)', fontSize: '14px', marginTop: '6px' }}>
                 info@klasikajans.com
               </p>
             </div>
-            <Link href="/iletisim" className="btn-primary">
+            <Link href="/iletisim" className="btn-lime">
               İletişime Geçin
             </Link>
           </div>

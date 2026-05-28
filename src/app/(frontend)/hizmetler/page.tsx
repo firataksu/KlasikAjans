@@ -11,8 +11,9 @@ const services = [
   {
     num: '01',
     title: 'Tasarım',
-    color: '#1A6B3C',
-    bg: '#E6F4EC',
+    color: '#4ADE80',
+    bg: 'rgba(74,222,128,0.08)',
+    border: 'rgba(74,222,128,0.2)',
     tagline: 'Görünüş değil, iletişim.',
     body: 'Logonuz ne anlatıyor? Kurumsal kimliğiniz güven veriyor mu? Tasarımı iş yapan bir araca dönüştürürüz.',
     deliverables: ['Logo & marka kimliği', 'Kurumsal kimlik kılavuzu', 'Baskı materyalleri', 'Dijital görseller & sosyal medya'],
@@ -21,8 +22,9 @@ const services = [
   {
     num: '02',
     title: 'Video & Animasyon',
-    color: '#6B21A8',
-    bg: '#F3E8FF',
+    color: '#A78BFA',
+    bg: 'rgba(167,139,250,0.08)',
+    border: 'rgba(167,139,250,0.2)',
     tagline: 'Göstermek, anlatmaktan hızlıdır.',
     body: 'Ürününüzü anlatmanın en hızlı yolu göstermektir. Masaüstü video ve animasyonlarla kompleks fikirleri sade ve çarpıcı hale getiririz.',
     deliverables: ['Masaüstü ürün animasyonları', 'Motion design', 'Kurumsal tanıtım videoları', 'Sosyal medya video içerikleri'],
@@ -31,8 +33,9 @@ const services = [
   {
     num: '03',
     title: 'İçerik',
-    color: '#B91C1C',
-    bg: '#FEE2E2',
+    color: '#F87171',
+    bg: 'rgba(248,113,113,0.08)',
+    border: 'rgba(248,113,113,0.2)',
     tagline: 'Ne söylediğiniz kadar nasıl söylediğiniz de önemli.',
     body: 'Markanızın sesini bulup tutarlı bir dille konuştururuz. Metin yazmaktan strateji kurmaya kadar.',
     deliverables: ['Marka sesi & ton of voice', 'Web sitesi metinleri', 'Sosyal medya içerikleri', 'İçerik stratejisi'],
@@ -41,8 +44,9 @@ const services = [
   {
     num: '04',
     title: 'Web Sitesi',
-    color: '#1B3FC4',
-    bg: '#E8EDFC',
+    color: '#60A5FA',
+    bg: 'rgba(96,165,250,0.08)',
+    border: 'rgba(96,165,250,0.2)',
     tagline: 'Hızlı yüklenen, mobilde çalışan, müşteri kazandıran.',
     body: 'Süs değil, sonuç. Kurumsal siteden e-ticarete, landing page\'den uygulamaya — işe yarayan web çözümleri üretiyoruz.',
     deliverables: ['Kurumsal web siteleri', 'Landing page', 'E-ticaret', 'Web uygulama arayüzleri'],
@@ -54,19 +58,32 @@ export default function HizmetlerPage() {
   return (
     <>
       {/* Sayfa başlığı */}
-      <section className="section-sm" style={{ backgroundColor: '#E8E3D4' }}>
+      <section className="section-sm" style={{ backgroundColor: '#111111' }}>
         <div className="container">
-          <h1 style={{ color: '#1A1A1A', marginBottom: '0.75rem' }}>Hizmetler</h1>
-          <p style={{ color: '#5C5C52', fontSize: '1.05rem', maxWidth: '520px', margin: 0 }}>
+          <p
+            style={{
+              fontFamily: 'var(--font-inter)',
+              fontSize: '11px',
+              fontWeight: 600,
+              letterSpacing: '0.14em',
+              textTransform: 'uppercase',
+              color: '#B3FF6B',
+              marginBottom: '0.75rem',
+            }}
+          >
+            Ne yapıyoruz
+          </p>
+          <h1 style={{ color: '#F0ECE4', marginBottom: '0.75rem' }}>Hizmetler</h1>
+          <p style={{ color: 'rgba(240,236,228,0.5)', fontSize: '1.05rem', maxWidth: '520px', margin: 0 }}>
             Dört alanda üretim yapıyoruz. Her biri için gerçek çözümler, gerçek sonuçlar.
           </p>
         </div>
       </section>
 
-      <hr className="divider" />
+      <div className="divider" />
 
-      {/* Servis kartları — büyük grid */}
-      <section className="section" style={{ backgroundColor: '#F7F4EC' }}>
+      {/* Servis kartları */}
+      <section className="section" style={{ backgroundColor: '#0D0D0D' }}>
         <div className="container">
           <div
             style={{
@@ -79,18 +96,19 @@ export default function HizmetlerPage() {
               <div
                 key={s.num}
                 style={{
-                  backgroundColor: '#FAFAF5',
-                  border: '1px solid #D8D4C8',
+                  backgroundColor: '#171717',
+                  border: `1px solid ${s.border}`,
                   borderRadius: '12px',
                   overflow: 'hidden',
+                  transition: 'transform 250ms ease, box-shadow 250ms ease',
                 }}
               >
                 {/* Renkli üst alan */}
                 <div
                   style={{
-                    backgroundColor: s.color,
+                    backgroundColor: s.bg,
+                    borderBottom: `1px solid ${s.border}`,
                     padding: '1.5rem 1.5rem 1.2rem',
-                    position: 'relative',
                   }}
                 >
                   <div
@@ -98,8 +116,9 @@ export default function HizmetlerPage() {
                       fontFamily: 'var(--font-inter)',
                       fontSize: '11px',
                       fontWeight: 600,
-                      color: 'rgba(255,255,255,0.7)',
+                      color: s.color,
                       letterSpacing: '0.12em',
+                      opacity: 0.7,
                       marginBottom: '0.5rem',
                     }}
                   >
@@ -109,7 +128,7 @@ export default function HizmetlerPage() {
                     style={{
                       fontFamily: 'var(--font-playfair)',
                       fontSize: 'clamp(1.4rem, 3vw, 1.8rem)',
-                      color: '#FFFFFF',
+                      color: s.color,
                       marginBottom: '0.4rem',
                       lineHeight: 1.15,
                     }}
@@ -120,7 +139,7 @@ export default function HizmetlerPage() {
                     style={{
                       fontFamily: 'var(--font-inter)',
                       fontSize: '12.5px',
-                      color: 'rgba(255,255,255,0.75)',
+                      color: 'rgba(240,236,228,0.5)',
                       fontStyle: 'italic',
                       margin: 0,
                     }}
@@ -135,7 +154,7 @@ export default function HizmetlerPage() {
                     style={{
                       fontFamily: 'var(--font-inter)',
                       fontSize: '13.5px',
-                      color: '#5C5C52',
+                      color: 'rgba(240,236,228,0.55)',
                       lineHeight: 1.65,
                       marginBottom: '1.2rem',
                     }}
@@ -147,7 +166,7 @@ export default function HizmetlerPage() {
                   <div
                     style={{
                       paddingTop: '1rem',
-                      borderTop: '1px solid #E8E3D8',
+                      borderTop: '1px solid rgba(255,255,255,0.07)',
                     }}
                   >
                     <p
@@ -159,6 +178,7 @@ export default function HizmetlerPage() {
                         letterSpacing: '0.1em',
                         textTransform: 'uppercase',
                         marginBottom: '0.6rem',
+                        opacity: 0.85,
                       }}
                     >
                       Neler Üretiyoruz
@@ -170,7 +190,7 @@ export default function HizmetlerPage() {
                           style={{
                             fontFamily: 'var(--font-inter)',
                             fontSize: '13px',
-                            color: '#1A1A1A',
+                            color: 'rgba(240,236,228,0.7)',
                             padding: '4px 0',
                             display: 'flex',
                             alignItems: 'center',
@@ -179,11 +199,12 @@ export default function HizmetlerPage() {
                         >
                           <span
                             style={{
-                              width: '5px',
-                              height: '5px',
+                              width: '4px',
+                              height: '4px',
                               borderRadius: '50%',
                               backgroundColor: s.color,
                               flexShrink: 0,
+                              opacity: 0.7,
                             }}
                           />
                           {d}
@@ -194,13 +215,13 @@ export default function HizmetlerPage() {
 
                   {/* İlgili referanslar */}
                   {s.relatedIds.length > 0 && (
-                    <div style={{ marginTop: '1.2rem', paddingTop: '1rem', borderTop: '1px solid #E8E3D8' }}>
+                    <div style={{ marginTop: '1.2rem', paddingTop: '1rem', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
                       <p
                         style={{
                           fontFamily: 'var(--font-inter)',
                           fontSize: '10.5px',
                           fontWeight: 600,
-                          color: '#5C5C52',
+                          color: 'rgba(240,236,228,0.4)',
                           letterSpacing: '0.1em',
                           textTransform: 'uppercase',
                           marginBottom: '0.5rem',
@@ -223,6 +244,7 @@ export default function HizmetlerPage() {
                                 fontFamily: 'var(--font-inter)',
                                 fontSize: '11px',
                                 fontWeight: 600,
+                                border: `1px solid ${s.border}`,
                               }}
                             >
                               {proj.name}
@@ -241,7 +263,12 @@ export default function HizmetlerPage() {
 
       {/* CTA */}
       <section
-        style={{ backgroundColor: '#1A1A1A', paddingTop: '4.5rem', paddingBottom: '4.5rem' }}
+        style={{
+          backgroundColor: '#060606',
+          paddingTop: '4.5rem',
+          paddingBottom: '4.5rem',
+          borderTop: '1px solid rgba(255,255,255,0.05)',
+        }}
       >
         <div className="container">
           <div
@@ -254,29 +281,14 @@ export default function HizmetlerPage() {
             }}
           >
             <div>
-              <h2 style={{ color: '#F7F4EC', margin: 0 }}>
+              <h2 style={{ color: '#F0ECE4', margin: 0 }}>
                 Hangi hizmet ilginizi çekti?
               </h2>
-              <p style={{ color: 'rgba(247,244,236,0.6)', marginTop: '0.5rem', margin: 0 }}>
+              <p style={{ color: 'rgba(240,236,228,0.45)', marginTop: '0.5rem', margin: 0 }}>
                 Projenizi anlatın, size en uygun çözümü konuşalım.
               </p>
             </div>
-            <Link
-              href="/iletisim"
-              style={{
-                display: 'inline-block',
-                padding: '0.8rem 2rem',
-                backgroundColor: '#F7F4EC',
-                color: '#1A1A1A',
-                borderRadius: '4px',
-                fontFamily: 'var(--font-inter)',
-                fontWeight: 600,
-                fontSize: '0.875rem',
-                letterSpacing: '0.04em',
-                textDecoration: 'none',
-                whiteSpace: 'nowrap',
-              }}
-            >
+            <Link href="/iletisim" className="btn-lime" style={{ whiteSpace: 'nowrap' }}>
               İletişime Geçin
             </Link>
           </div>

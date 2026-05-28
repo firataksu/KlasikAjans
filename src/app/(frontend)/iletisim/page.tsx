@@ -28,7 +28,7 @@ export default function IletisimPage() {
   return (
     <>
       {/* Başlık */}
-      <section className="section-sm" style={{ backgroundColor: '#E8E3D4' }}>
+      <section className="section-sm" style={{ backgroundColor: '#111111' }}>
         <div className="container">
           <p
             style={{
@@ -37,25 +37,25 @@ export default function IletisimPage() {
               fontWeight: 600,
               letterSpacing: '0.14em',
               textTransform: 'uppercase',
-              color: '#5C5C52',
+              color: '#B3FF6B',
               marginBottom: '0.75rem',
             }}
           >
             İletişim
           </p>
-          <h1 style={{ color: '#1A1A1A', marginBottom: '0.75rem' }}>
+          <h1 style={{ color: '#F0ECE4', marginBottom: '0.75rem' }}>
             İletişime Geçin
           </h1>
-          <p style={{ color: '#5C5C52', fontSize: '1.05rem', maxWidth: '420px', margin: 0 }}>
+          <p style={{ color: 'rgba(240,236,228,0.5)', fontSize: '1.05rem', maxWidth: '420px', margin: 0 }}>
             Projenizi anlatın. Genellikle 24 saat içinde dönüş yaparız.
           </p>
         </div>
       </section>
 
-      <hr className="divider" />
+      <div className="divider" />
 
       {/* Form + Bilgiler */}
-      <section className="section" style={{ backgroundColor: '#F7F4EC' }}>
+      <section className="section" style={{ backgroundColor: '#0D0D0D' }}>
         <div className="container">
           <div
             style={{
@@ -78,7 +78,7 @@ export default function IletisimPage() {
                     key={item.label}
                     style={{
                       padding: '1.4rem 0',
-                      borderBottom: i < contactInfo.length - 1 ? '1px solid #D8D4C8' : 'none',
+                      borderBottom: i < contactInfo.length - 1 ? '1px solid rgba(255,255,255,0.07)' : 'none',
                     }}
                   >
                     <p
@@ -88,7 +88,7 @@ export default function IletisimPage() {
                         fontWeight: 600,
                         letterSpacing: '0.12em',
                         textTransform: 'uppercase',
-                        color: '#5C5C52',
+                        color: 'rgba(240,236,228,0.35)',
                         marginBottom: '0.4rem',
                       }}
                     >
@@ -97,13 +97,13 @@ export default function IletisimPage() {
                     {item.href ? (
                       <a
                         href={item.href}
+                        className="hover-lime"
                         style={{
                           fontFamily: 'var(--font-inter)',
                           fontSize: '15px',
                           fontWeight: 500,
-                          color: '#1A1A1A',
+                          color: '#F0ECE4',
                           textDecoration: 'none',
-                          transition: 'color 150ms ease',
                         }}
                       >
                         {item.value}
@@ -114,7 +114,7 @@ export default function IletisimPage() {
                           fontFamily: 'var(--font-inter)',
                           fontSize: '15px',
                           fontWeight: 500,
-                          color: '#1A1A1A',
+                          color: '#F0ECE4',
                           margin: 0,
                         }}
                       >
@@ -130,7 +130,8 @@ export default function IletisimPage() {
                 style={{
                   marginTop: '2.5rem',
                   padding: '1.5rem',
-                  backgroundColor: '#1A1A1A',
+                  backgroundColor: 'rgba(179,255,107,0.06)',
+                  border: '1px solid rgba(179,255,107,0.2)',
                   borderRadius: '10px',
                 }}
               >
@@ -139,18 +140,18 @@ export default function IletisimPage() {
                     fontFamily: 'var(--font-playfair)',
                     fontSize: '1.1rem',
                     fontWeight: 700,
-                    color: '#F7F4EC',
+                    color: '#F0ECE4',
                     marginBottom: '0.5rem',
                     lineHeight: 1.35,
                   }}
                 >
-                  Az laf, çok iş.
+                  Az laf, çok iş<span style={{ color: '#B3FF6B' }}>.</span>
                 </p>
                 <p
                   style={{
                     fontFamily: 'var(--font-inter)',
                     fontSize: '13px',
-                    color: 'rgba(247,244,236,0.6)',
+                    color: 'rgba(240,236,228,0.5)',
                     lineHeight: 1.65,
                     margin: 0,
                   }}
