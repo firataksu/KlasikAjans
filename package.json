@@ -9,9 +9,15 @@
     "lint": "eslint",
     "seed": "npx tsx src/seed.ts",
     "payload": "payload",
-    "prepare": "cp scripts/pre-push.sh .git/hooks/pre-push && chmod +x .git/hooks/pre-push && echo 'Git hooks kuruldu'"
+    "prepare": "[ -d .git ] && cp scripts/pre-push.sh .git/hooks/pre-push && chmod +x .git/hooks/pre-push && echo 'Git hooks kuruldu' || true",
+    "ajan:icerik": "npx tsx ajanslar/icerik-yazari.ts",
+    "ajan:seo": "npx tsx ajanslar/seo-uzman.ts",
+    "ajan:sosyal": "npx tsx ajanslar/sosyal-medya.ts",
+    "ajan:musteri": "npx tsx ajanslar/musteri-yanit.ts",
+    "ajan:kod": "npx tsx ajanslar/kod-denetci.ts"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.52.0",
     "@payloadcms/db-postgres": "^3.85.0",
     "@payloadcms/db-sqlite": "^3.85.0",
     "@payloadcms/next": "^3.85.0",

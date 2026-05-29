@@ -94,7 +94,7 @@ export default function Navbar() {
                 className="btn-lime"
                 style={{ padding: '0.5rem 1.2rem', fontSize: '13px', borderRadius: '6px' }}
               >
-                Projeyi Konuşalım
+                Hemen Başlayalım
               </Link>
             </li>
           </ul>
@@ -152,7 +152,7 @@ export default function Navbar() {
           ))}
           <li style={{ paddingTop: '0.5rem' }}>
             <Link href="/iletisim" className="btn-lime" style={{ display: 'inline-block' }}>
-              Projeyi Konuşalım
+              Hemen Başlayalım
             </Link>
           </li>
         </ul>

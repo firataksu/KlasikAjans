@@ -4,7 +4,7 @@ import { portfolioProjects } from '@/data/portfolio'
 
 export const metadata: Metadata = {
   title: 'Hizmetler — Klasik Ajans',
-  description: 'Tasarım, video animasyon, içerik ve web sitesi. Dört alanda çözüm üretiyoruz.',
+  description: 'Tasarım, video animasyon, içerik, sosyal medya, web sitesi ve strateji. Her alanda gerçek çözümler, gerçek sonuçlar.',
 }
 
 const services = [
@@ -16,7 +16,7 @@ const services = [
     border: 'rgba(74,222,128,0.2)',
     tagline: 'Görünüş değil, iletişim.',
     body: 'Logonuz ne anlatıyor? Kurumsal kimliğiniz güven veriyor mu? Tasarımı iş yapan bir araca dönüştürürüz.',
-    deliverables: ['Logo & marka kimliği', 'Kurumsal kimlik kılavuzu', 'Baskı materyalleri', 'Dijital görseller & sosyal medya'],
+    deliverables: ['Logo & marka kimliği', 'Kurumsal kimlik kılavuzu', 'UI/UX tasarımı', 'Baskı materyalleri', 'Dijital görseller'],
     relatedIds: ['pierre-fabre', 'anpa-gross', 'portx'],
   },
   {
@@ -37,12 +37,23 @@ const services = [
     bg: 'rgba(248,113,113,0.08)',
     border: 'rgba(248,113,113,0.2)',
     tagline: 'Ne söylediğiniz kadar nasıl söylediğiniz de önemli.',
-    body: 'Markanızın sesini bulup tutarlı bir dille konuştururuz. Metin yazmaktan strateji kurmaya kadar.',
-    deliverables: ['Marka sesi & ton of voice', 'Web sitesi metinleri', 'Sosyal medya içerikleri', 'İçerik stratejisi'],
+    body: 'Markanızın sesini bulup tutarlı bir dille konuştururuz. Web sitesi metinlerinizden marka ses rehberinize kadar her kelimeyi doğru yerine koyarız.',
+    deliverables: ['Marka sesi & ton of voice rehberi', 'Web sitesi metinleri', 'Ürün ve kampanya metinleri'],
     relatedIds: ['noom', 'fenertalk', 're-pie'],
   },
   {
     num: '04',
+    title: 'Sosyal Medya',
+    color: '#FB923C',
+    bg: 'rgba(251,146,60,0.08)',
+    border: 'rgba(251,146,60,0.2)',
+    tagline: 'Hesabınız aktif, takipçiniz gerçek.',
+    body: 'Sosyal medya yönetimi bir içerik takviminden ibaret değil. Doğru zamanda doğru içeriği yayınlamak, topluluğunuzu büyütmek ve marka tutarlılığını korumak ister.',
+    deliverables: ['Hesap yönetimi', 'İçerik takvimi & üretimi', 'Topluluk yönetimi', 'Performans raporlaması'],
+    relatedIds: ['fenertalk', 'noom'],
+  },
+  {
+    num: '05',
     title: 'Web Sitesi',
     color: '#60A5FA',
     bg: 'rgba(96,165,250,0.08)',
@@ -51,6 +62,17 @@ const services = [
     body: 'Süs değil, sonuç. Kurumsal siteden e-ticarete, landing page\'den uygulamaya — işe yarayan web çözümleri üretiyoruz.',
     deliverables: ['Kurumsal web siteleri', 'Landing page', 'E-ticaret', 'Web uygulama arayüzleri'],
     relatedIds: ['portx', 'pierre-fabre'],
+  },
+  {
+    num: '06',
+    title: 'Strateji',
+    color: '#FBBF24',
+    bg: 'rgba(251,191,36,0.08)',
+    border: 'rgba(251,191,36,0.2)',
+    tagline: 'Nereye gittiğinizi bilmeden yola çıkmayın.',
+    body: 'Kim olduğunuzu, kime konuştuğunuzu ve nasıl büyüyeceğinizi netleştiriyoruz. Marka stratejisinden içerik planına, sosyal medya stratejisinden konumlandırmaya kadar yol haritanızı çiziyoruz.',
+    deliverables: ['Marka stratejisi & konumlandırma', 'İçerik stratejisi', 'Sosyal medya stratejisi', 'Rekabet analizi'],
+    relatedIds: [],
   },
 ]
 
@@ -75,7 +97,7 @@ export default function HizmetlerPage() {
           </p>
           <h1 style={{ color: '#F0ECE4', marginBottom: '0.75rem' }}>Hizmetler</h1>
           <p style={{ color: 'rgba(240,236,228,0.5)', fontSize: '1.05rem', maxWidth: '520px', margin: 0 }}>
-            Dört alanda üretim yapıyoruz. Her biri için gerçek çözümler, gerçek sonuçlar.
+            Tasarımdan stratejiye, içerikten web sitesine. Her alanda gerçek çözümler, gerçek sonuçlar.
           </p>
         </div>
       </section>

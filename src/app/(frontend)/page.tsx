@@ -6,7 +6,7 @@ import { portfolioProjects } from '@/data/portfolio'
 export const metadata: Metadata = {
   title: 'Klasik Ajans — Az laf, çok iş.',
   description:
-    'Tasarım, video animasyon, içerik ve web işleri. Sade anlatır, düzgün üretir, zamanında teslim ederiz.',
+    'Tasarım, video animasyon, içerik, sosyal medya, web sitesi ve strateji. Sade anlatır, düzgün üretir, zamanında teslim ederiz.',
 }
 
 const featuredProjects = portfolioProjects.filter((p) => p.featured).slice(0, 6)
@@ -25,7 +25,7 @@ const services = [
   {
     num: '01',
     title: 'Tasarım',
-    desc: 'Logo, kurumsal kimlik, baskı ve dijital görseller.',
+    desc: 'Logo, kurumsal kimlik, UI/UX, baskı ve dijital görseller.',
     color: '#4ADE80',
     border: 'rgba(74,222,128,0.25)',
     glow: 'rgba(74,222,128,0.08)',
@@ -41,18 +41,34 @@ const services = [
   {
     num: '03',
     title: 'İçerik',
-    desc: 'Metin, sosyal medya içeriği, strateji ve marka sesi.',
+    desc: 'Web metinleri, marka sesi ve ton of voice rehberi.',
     color: '#F87171',
     border: 'rgba(248,113,113,0.25)',
     glow: 'rgba(248,113,113,0.08)',
   },
   {
     num: '04',
+    title: 'Sosyal Medya',
+    desc: 'Hesap yönetimi, içerik takvimi ve topluluk yönetimi.',
+    color: '#FB923C',
+    border: 'rgba(251,146,60,0.25)',
+    glow: 'rgba(251,146,60,0.08)',
+  },
+  {
+    num: '05',
     title: 'Web Sitesi',
     desc: 'Kurumsal siteler, landing page, e-ticaret çözümleri.',
     color: '#60A5FA',
     border: 'rgba(96,165,250,0.25)',
     glow: 'rgba(96,165,250,0.08)',
+  },
+  {
+    num: '06',
+    title: 'Strateji',
+    desc: 'Marka stratejisi, içerik stratejisi ve sosyal medya stratejisi.',
+    color: '#FBBF24',
+    border: 'rgba(251,191,36,0.25)',
+    glow: 'rgba(251,191,36,0.08)',
   },
 ]
 
@@ -125,7 +141,7 @@ export default function HomePage() {
                   marginBottom: '2.5rem',
                 }}
               >
-                Tasarım, video animasyon, içerik ve web işleri. Sade anlatır, düzgün üretir, zamanında teslim ederiz.
+                Tasarım, video animasyon, içerik, sosyal medya ve web işleri. Sade anlatır, düzgün üretir, zamanında teslim ederiz.
               </p>
 
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
@@ -133,7 +149,7 @@ export default function HomePage() {
                   İşlere Bak
                 </Link>
                 <Link href="/iletisim" className="btn-outline">
-                  Proje Konuşalım
+                  Hemen Başlayalım
                 </Link>
               </div>
             </div>
@@ -214,24 +230,6 @@ export default function HomePage() {
                   style={{ objectFit: 'cover', objectPosition: 'top center' }}
                 />
                 <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 55%)' }} />
-                {/* Lime badge */}
-                <div
-                  style={{
-                    position: 'absolute',
-                    bottom: '14px',
-                    left: '14px',
-                    padding: '3px 10px',
-                    backgroundColor: '#B3FF6B',
-                    borderRadius: '999px',
-                    fontFamily: 'var(--font-inter)',
-                    fontSize: '10px',
-                    fontWeight: 700,
-                    color: '#0A0A0A',
-                    letterSpacing: '0.05em',
-                  }}
-                >
-                  14+ Proje
-                </div>
               </div>
 
               {/* Arka ışıma */}
@@ -337,7 +335,7 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
             {services.map((s) => (
               <div
