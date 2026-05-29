@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --webpack",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "seed": "npx tsx src/seed.ts",
-    "payload": "payload"
+    "payload": "payload",
+    "prepare": "cp scripts/pre-push.sh .git/hooks/pre-push && chmod +x .git/hooks/pre-push && echo 'Git hooks kuruldu'"
   },
   "dependencies": {
     "@payloadcms/db-postgres": "^3.85.0",

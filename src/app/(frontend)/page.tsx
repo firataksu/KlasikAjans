@@ -58,156 +58,198 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════
           HERO BANNER
       ══════════════════════════════════════════ */}
-      <section style={{ backgroundColor: '#0D0D0D', paddingTop: '6rem', paddingBottom: '5rem' }}>
+      <section style={{ backgroundColor: '#0D0D0D', paddingTop: '6rem', paddingBottom: '5.5rem' }}>
         <div className="container">
-          {/* Rozet */}
-          <div
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '8px',
-              marginBottom: '2.25rem',
-              padding: '5px 14px 5px 10px',
-              backgroundColor: 'rgba(255,255,255,0.05)',
-              border: '1px solid rgba(255,255,255,0.1)',
-              borderRadius: '999px',
-            }}
-          >
-            <span
-              style={{
-                width: '6px',
-                height: '6px',
-                borderRadius: '50%',
-                backgroundColor: '#B3FF6B',
-                flexShrink: 0,
-                boxShadow: '0 0 0 3px rgba(179,255,107,0.25)',
-              }}
-            />
-            <span
-              style={{
-                fontFamily: 'var(--font-inter)',
-                fontSize: '11.5px',
-                fontWeight: 500,
-                color: 'rgba(240,236,228,0.6)',
-                letterSpacing: '0.05em',
-              }}
-            >
-              Klasik Ajans · İstanbul
-            </span>
-          </div>
-
-          {/* Başlık */}
-          <h1
-            style={{
-              color: '#F0ECE4',
-              marginBottom: '1.5rem',
-              maxWidth: '760px',
-            }}
-          >
-            Az laf,{' '}
-            <em style={{ fontStyle: 'italic' }}>
-              çok iş<span style={{ color: '#B3FF6B' }}>.</span>
-            </em>
-          </h1>
-
-          <p
-            style={{
-              color: 'rgba(240,236,228,0.6)',
-              fontSize: '1.15rem',
-              lineHeight: 1.75,
-              maxWidth: '520px',
-              marginBottom: '2.5rem',
-            }}
-          >
-            Tasarım, video animasyon, içerik ve web işleri. Sade anlatır, düzgün üretir, zamanında teslim ederiz.
-          </p>
-
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginBottom: '4rem' }}>
-            <Link href="/referanslar" className="btn-primary">
-              İşlere Bak
-            </Link>
-            <Link href="/iletisim" className="btn-outline">
-              Projeyi Konuşalım
-            </Link>
-          </div>
-
-          {/* Portfolio thumbnail şeridi */}
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(7, 1fr)',
-              gap: '8px',
-              overflow: 'hidden',
-              borderRadius: '12px',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+              gap: '3rem',
+              alignItems: 'center',
             }}
           >
-            {portfolioProjects.slice(0, 7).map((project) => (
+            {/* Sol: Metin */}
+            <div>
+              {/* Rozet */}
               <div
-                key={project.id}
                 style={{
-                  position: 'relative',
-                  aspectRatio: '3 / 4',
-                  backgroundColor: project.color,
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  marginBottom: '2.25rem',
+                  padding: '5px 14px 5px 10px',
+                  backgroundColor: 'rgba(255,255,255,0.05)',
+                  border: '1px solid rgba(255,255,255,0.1)',
+                  borderRadius: '999px',
+                }}
+              >
+                <span
+                  style={{
+                    width: '6px',
+                    height: '6px',
+                    borderRadius: '50%',
+                    backgroundColor: '#B3FF6B',
+                    flexShrink: 0,
+                    boxShadow: '0 0 0 3px rgba(179,255,107,0.25)',
+                  }}
+                />
+                <span
+                  style={{
+                    fontFamily: 'var(--font-inter)',
+                    fontSize: '11.5px',
+                    fontWeight: 500,
+                    color: 'rgba(240,236,228,0.6)',
+                    letterSpacing: '0.05em',
+                  }}
+                >
+                  Klasik Ajans · İstanbul
+                </span>
+              </div>
+
+              <h1 style={{ color: '#F0ECE4', marginBottom: '1.5rem' }}>
+                Az laf,{' '}
+                <em style={{ fontStyle: 'italic' }}>
+                  çok iş<span style={{ color: '#B3FF6B' }}>.</span>
+                </em>
+              </h1>
+
+              <p
+                style={{
+                  color: 'rgba(240,236,228,0.6)',
+                  fontSize: '1.1rem',
+                  lineHeight: 1.75,
+                  maxWidth: '460px',
+                  marginBottom: '2.5rem',
+                }}
+              >
+                Tasarım, video animasyon, içerik ve web işleri. Sade anlatır, düzgün üretir, zamanında teslim ederiz.
+              </p>
+
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
+                <Link href="/referanslar" className="btn-primary">
+                  İşlere Bak
+                </Link>
+                <Link href="/iletisim" className="btn-outline">
+                  Projeyi Konuşalım
+                </Link>
+              </div>
+            </div>
+
+            {/* Sağ: Kolaj */}
+            <div
+              style={{
+                position: 'relative',
+                height: '380px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              {/* Kart 1 — arka sol */}
+              <div
+                style={{
+                  position: 'absolute',
+                  width: '185px',
+                  height: '248px',
+                  borderRadius: '14px',
                   overflow: 'hidden',
-                  borderRadius: '8px',
+                  transform: 'rotate(-8deg) translate(-72px, 28px)',
+                  boxShadow: '0 12px 40px rgba(0,0,0,0.5)',
+                  border: '1px solid rgba(255,255,255,0.08)',
+                  zIndex: 0,
                 }}
               >
                 <Image
-                  src={`/portfolio/thumbs/${project.id}.jpg`}
-                  alt={project.name}
+                  src="/portfolio/thumbs/fonmap.jpg"
+                  alt="Fonmap"
                   fill
                   unoptimized
-                  sizes="(max-width: 768px) 25vw, 14vw"
+                  sizes="185px"
                   style={{ objectFit: 'cover', objectPosition: 'top center' }}
                 />
-                <div className="thumb-overlay" />
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%)' }} />
               </div>
-            ))}
-          </div>
 
-          {/* İstatistikler */}
-          <div
-            style={{
-              marginTop: '3rem',
-              paddingTop: '2rem',
-              borderTop: '1px solid rgba(255,255,255,0.07)',
-              display: 'flex',
-              gap: '3rem',
-              flexWrap: 'wrap',
-            }}
-          >
-            {[
-              { val: '14+', label: 'Proje' },
-              { val: '4', label: 'Hizmet Alanı' },
-              { val: '100%', label: 'Zamanında Teslim' },
-            ].map((stat) => (
-              <div key={stat.label}>
+              {/* Kart 2 — arka sağ */}
+              <div
+                style={{
+                  position: 'absolute',
+                  width: '178px',
+                  height: '238px',
+                  borderRadius: '14px',
+                  overflow: 'hidden',
+                  transform: 'rotate(7deg) translate(76px, -18px)',
+                  boxShadow: '0 12px 40px rgba(0,0,0,0.45)',
+                  border: '1px solid rgba(255,255,255,0.08)',
+                  zIndex: 0,
+                }}
+              >
+                <Image
+                  src="/portfolio/thumbs/cloverr.jpg"
+                  alt="Cloverr"
+                  fill
+                  unoptimized
+                  sizes="178px"
+                  style={{ objectFit: 'cover', objectPosition: 'top center' }}
+                />
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%)' }} />
+              </div>
+
+              {/* Kart 3 — ön merkez */}
+              <div
+                style={{
+                  position: 'absolute',
+                  width: '200px',
+                  height: '268px',
+                  borderRadius: '16px',
+                  overflow: 'hidden',
+                  transform: 'rotate(-1.5deg) translate(4px, -8px)',
+                  boxShadow: '0 24px 60px rgba(0,0,0,0.65), 0 0 0 1px rgba(255,255,255,0.1)',
+                  zIndex: 2,
+                }}
+              >
+                <Image
+                  src="/portfolio/thumbs/pierre-fabre.jpg"
+                  alt="Pierre Fabre"
+                  fill
+                  unoptimized
+                  sizes="200px"
+                  style={{ objectFit: 'cover', objectPosition: 'top center' }}
+                />
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 55%)' }} />
+                {/* Lime badge */}
                 <div
                   style={{
-                    fontFamily: 'var(--font-playfair)',
-                    fontSize: '2rem',
-                    fontWeight: 700,
-                    color: '#F0ECE4',
-                    lineHeight: 1,
-                    letterSpacing: '-0.01em',
-                  }}
-                >
-                  {stat.val}
-                </div>
-                <div
-                  style={{
+                    position: 'absolute',
+                    bottom: '14px',
+                    left: '14px',
+                    padding: '3px 10px',
+                    backgroundColor: '#B3FF6B',
+                    borderRadius: '999px',
                     fontFamily: 'var(--font-inter)',
-                    fontSize: '10.5px',
-                    color: 'rgba(240,236,228,0.45)',
-                    letterSpacing: '0.08em',
-                    textTransform: 'uppercase',
-                    marginTop: '5px',
+                    fontSize: '10px',
+                    fontWeight: 700,
+                    color: '#0A0A0A',
+                    letterSpacing: '0.05em',
                   }}
                 >
-                  {stat.label}
+                  14+ Proje
                 </div>
               </div>
-            ))}
+
+              {/* Arka ışıma */}
+              <div
+                style={{
+                  position: 'absolute',
+                  width: '280px',
+                  height: '280px',
+                  borderRadius: '50%',
+                  background: 'radial-gradient(circle, rgba(179,255,107,0.06) 0%, transparent 70%)',
+                  zIndex: -1,
+                  pointerEvents: 'none',
+                }}
+              />
+            </div>
           </div>
         </div>
       </section>

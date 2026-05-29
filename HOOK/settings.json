@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash /Users/firataksu/Desktop/KlasikWebSite/klasik-ajans/scripts/claude-ts-check.sh",
+            "timeout": 40,
+            "statusMessage": "TypeScript kontrol ediliyor..."
+          }
+        ]
+      }
+    ]
+  }
+}
