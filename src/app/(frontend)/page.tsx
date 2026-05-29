@@ -11,6 +11,16 @@ export const metadata: Metadata = {
 
 const featuredProjects = portfolioProjects.filter((p) => p.featured).slice(0, 6)
 
+// Her kart için farklı yakın plan pozisyonu — göz yormayan çeşitlilik
+const cardCrop: Record<string, { position: string; scale: string }> = {
+  'pierre-fabre': { position: '50% 8%',  scale: 'scale(1.35)' },
+  'anpa-gross':   { position: '50% 30%', scale: 'scale(1.25)' },
+  'portx':        { position: '25% 12%', scale: 'scale(1.4)'  },
+  'cloverr':      { position: '50% 18%', scale: 'scale(1.3)'  },
+  'repzone':      { position: '60% 35%', scale: 'scale(1.2)'  },
+  're-pie':       { position: '70% 10%', scale: 'scale(1.35)' },
+}
+
 const services = [
   {
     num: '01',
@@ -130,7 +140,7 @@ export default function HomePage() {
                   İşlere Bak
                 </Link>
                 <Link href="/iletisim" className="btn-outline">
-                  Projeyi Konuşalım
+                  Proje Konuşalım
                 </Link>
               </div>
             </div>
@@ -457,50 +467,47 @@ export default function HomePage() {
               <div key={project.id} className="portfolio-card">
                 <div
                   style={{
-                    height: '148px',
+                    height: '168px',
                     backgroundColor: project.color,
                     position: 'relative',
                     overflow: 'hidden',
                   }}
                 >
-                  <svg
-                    width="100%"
-                    height="100%"
-                    viewBox="0 0 320 148"
-                    fill="none"
-                    style={{ position: 'absolute', inset: 0 }}
-                    preserveAspectRatio="xMidYMid slice"
-                  >
-                    <rect x="20" y="20" width="130" height="90" rx="6" fill="rgba(255,255,255,0.09)" />
-                    <rect x="24" y="24" width="122" height="10" rx="3" fill="rgba(255,255,255,0.18)" />
-                    <rect x="24" y="38" width="80" height="5" rx="2" fill="rgba(255,255,255,0.12)" />
-                    <rect x="24" y="46" width="60" height="5" rx="2" fill="rgba(255,255,255,0.08)" />
-                    <rect x="24" y="58" width="110" height="42" rx="4" fill="rgba(255,255,255,0.10)" />
-                    <rect x="24" y="64" width="55" height="8" rx="2" fill="rgba(255,255,255,0.14)" />
-                    <rect x="24" y="76" width="38" height="5" rx="2" fill="rgba(255,255,255,0.09)" />
-                    <circle cx="248" cy="44" r="36" fill="rgba(255,255,255,0.06)" />
-                    <circle cx="248" cy="44" r="20" fill="rgba(255,255,255,0.08)" />
-                    <circle cx="248" cy="44" r="9" fill="rgba(255,255,255,0.11)" />
-                    <rect x="180" y="82" width="110" height="44" rx="6" fill="rgba(255,255,255,0.09)" />
-                    <rect x="186" y="88" width="60" height="6" rx="2" fill="rgba(255,255,255,0.15)" />
-                    <rect x="186" y="98" width="44" height="4" rx="2" fill="rgba(255,255,255,0.10)" />
-                    <rect x="186" y="106" width="52" height="4" rx="2" fill="rgba(255,255,255,0.07)" />
-                    <rect x="186" y="114" width="32" height="7" rx="3" fill="rgba(255,255,255,0.12)" />
-                  </svg>
+                  <Image
+                    src={`/portfolio/thumbs/${project.id}.jpg`}
+                    alt={project.name}
+                    fill
+                    unoptimized
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    style={{
+                      objectFit: 'cover',
+                      objectPosition: cardCrop[project.id]?.position ?? '50% 10%',
+                      transform: cardCrop[project.id]?.scale ?? 'scale(1.2)',
+                      transformOrigin: cardCrop[project.id]?.position ?? '50% 10%',
+                    }}
+                  />
+                  {/* Hafif alt gradient — metin okunabilirliği */}
+                  <div
+                    style={{
+                      position: 'absolute',
+                      inset: 0,
+                      background: 'linear-gradient(to top, rgba(0,0,0,0.45) 0%, transparent 50%)',
+                    }}
+                  />
                   <div
                     style={{
                       position: 'absolute',
                       top: '12px',
                       right: '12px',
                       padding: '3px 10px',
-                      backgroundColor: 'rgba(0,0,0,0.5)',
+                      backgroundColor: 'rgba(0,0,0,0.45)',
                       borderRadius: '999px',
                       fontFamily: 'var(--font-inter)',
                       fontSize: '10.5px',
                       fontWeight: 500,
                       color: 'rgba(255,255,255,0.9)',
                       letterSpacing: '0.05em',
-                      backdropFilter: 'blur(4px)',
+                      backdropFilter: 'blur(6px)',
                     }}
                   >
                     {project.country}
