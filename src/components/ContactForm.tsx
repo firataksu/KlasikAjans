@@ -108,9 +108,9 @@ export default function ContactForm({ successMessage }: { successMessage?: strin
   }
 
   return (
-    <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+    <form onSubmit={handleSubmit} className="flex flex-col gap-5">
       {/* Ad Soyad + E-posta — yan yana */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         <div>
           <label style={labelStyle}>
             Ad Soyad <span style={{ color: 'rgba(240,236,228,0.2)' }}>*</span>

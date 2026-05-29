@@ -28,7 +28,7 @@ export default function IletisimPage() {
   return (
     <>
       {/* Başlık */}
-      <section className="section-sm" style={{ backgroundColor: '#111111' }}>
+      <section className="bg-[#111111] py-10 md:py-16">
         <div className="container">
           <p
             style={{
@@ -55,16 +55,10 @@ export default function IletisimPage() {
       <div className="divider" />
 
       {/* Form + Bilgiler */}
-      <section className="section" style={{ backgroundColor: '#0D0D0D' }}>
+      <section className="bg-[#0D0D0D] py-16 md:py-24">
         <div className="container">
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '5rem',
-              alignItems: 'start',
-            }}
-          >
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+
             {/* Form */}
             <div>
               <ContactForm />

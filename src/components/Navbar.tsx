@@ -40,30 +40,13 @@ export default function Navbar() {
       }}
     >
       <div className="container">
-        <nav
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            height: '68px',
-          }}
-        >
-          <Link href="/" aria-label="Klasik Ajans Ana Sayfa" style={{ display: 'flex', alignItems: 'center' }}>
+        <nav className="flex items-center justify-between h-[68px]">
+          <Link href="/" aria-label="Klasik Ajans Ana Sayfa" className="flex items-center">
             <LogoKlasik size="md" variant="light" />
           </Link>
 
           {/* Desktop menü */}
-          <ul
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '2rem',
-              listStyle: 'none',
-              margin: 0,
-              padding: 0,
-            }}
-            className="hidden md:flex"
-          >
+          <ul className="hidden md:flex items-center gap-8 list-none m-0 p-0">
             {navLinks.map((link) => {
               const isActive = pathname === link.href
               return (
@@ -118,29 +101,16 @@ export default function Navbar() {
 
           {/* Hamburger */}
           <button
-            className="md:hidden"
+            className="md:hidden flex flex-col gap-[5px] p-2 bg-transparent border-none cursor-pointer"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Menüyü aç/kapat"
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '5px',
-              padding: '8px',
-              background: 'none',
-              border: 'none',
-              cursor: 'pointer',
-            }}
           >
             {[0, 1, 2].map((i) => (
               <span
                 key={i}
+                className="block w-[22px] h-[1.5px] bg-[#F0ECE4] rounded-[1px] transition-all duration-200"
                 style={{
-                  display: 'block',
-                  width: '22px',
-                  height: '1.5px',
-                  backgroundColor: '#F0ECE4',
-                  borderRadius: '1px',
-                  transition: 'transform 220ms ease, opacity 200ms ease',
+
                   transform:
                     menuOpen && i === 0
                       ? 'rotate(45deg) translate(2px, 5px)'
@@ -157,25 +127,10 @@ export default function Navbar() {
 
       {/* Mobil drawer */}
       <div
-        style={{
-          backgroundColor: '#0D0D0D',
-          borderTop: '1px solid rgba(255,255,255,0.06)',
-          overflow: 'hidden',
-          maxHeight: menuOpen ? '360px' : '0',
-          transition: 'max-height 320ms cubic-bezier(0.22, 1, 0.36, 1)',
-        }}
+        className={`bg-[#0D0D0D] border-t border-white/5 overflow-hidden transition-[max-height] duration-300 ease-in-out ${menuOpen ? 'max-h-[360px]' : 'max-h-0'}`}
       >
         <ul
-          className="container"
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            paddingTop: '1.5rem',
-            paddingBottom: '2rem',
-            gap: '1.25rem',
-            listStyle: 'none',
-            margin: 0,
-          }}
+          className="container flex flex-col pt-6 pb-8 gap-5 list-none m-0"
         >
           {navLinks.map((link) => (
             <li key={link.href}>

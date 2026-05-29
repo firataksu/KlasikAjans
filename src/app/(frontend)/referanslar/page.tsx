@@ -12,7 +12,7 @@ export default function ReferanslarPage() {
   return (
     <>
       {/* Başlık */}
-      <section className="section-sm" style={{ backgroundColor: '#111111' }}>
+      <section className="bg-[#111111] py-10 md:py-16">
         <div className="container">
           <div
             style={{
@@ -52,15 +52,10 @@ export default function ReferanslarPage() {
       <div className="divider" />
 
       {/* Grid */}
-      <section className="section" style={{ backgroundColor: '#0D0D0D' }}>
+      <section className="bg-[#0D0D0D] py-16 md:py-24">
         <div className="container">
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))',
-              gap: '20px',
-            }}
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
             {portfolioProjects.map((project) => (
               <article key={project.id} className="portfolio-card">
                 {/* Screenshot */}
@@ -158,14 +153,7 @@ export default function ReferanslarPage() {
       </section>
 
       {/* CTA */}
-      <section
-        style={{
-          backgroundColor: '#060606',
-          paddingTop: '4rem',
-          paddingBottom: '4rem',
-          borderTop: '1px solid rgba(255,255,255,0.05)',
-        }}
-      >
+      <section className="bg-[#060606] py-16 border-t border-white/5">
         <div className="container" style={{ textAlign: 'center' }}>
           <h2 style={{ color: '#F0ECE4', marginBottom: '0.75rem' }}>
             Sıradaki çalışma sizinki olsun.

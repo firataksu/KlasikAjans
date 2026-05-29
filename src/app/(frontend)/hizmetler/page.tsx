@@ -58,7 +58,7 @@ export default function HizmetlerPage() {
   return (
     <>
       {/* Sayfa başlığı */}
-      <section className="section-sm" style={{ backgroundColor: '#111111' }}>
+      <section className="bg-[#111111] py-10 md:py-16">
         <div className="container">
           <p
             style={{
@@ -83,15 +83,10 @@ export default function HizmetlerPage() {
       <div className="divider" />
 
       {/* Servis kartları */}
-      <section className="section" style={{ backgroundColor: '#0D0D0D' }}>
+      <section className="bg-[#0D0D0D] py-16 md:py-24">
         <div className="container">
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '20px',
-            }}
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
             {services.map((s) => (
               <div
                 key={s.num}
@@ -262,14 +257,7 @@ export default function HizmetlerPage() {
       </section>
 
       {/* CTA */}
-      <section
-        style={{
-          backgroundColor: '#060606',
-          paddingTop: '4.5rem',
-          paddingBottom: '4.5rem',
-          borderTop: '1px solid rgba(255,255,255,0.05)',
-        }}
-      >
+      <section className="bg-[#060606] py-16 border-t border-white/5">
         <div className="container">
           <div
             style={{

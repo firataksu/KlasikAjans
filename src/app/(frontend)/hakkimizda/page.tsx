@@ -41,7 +41,7 @@ export default function HakkimizdaPage() {
   return (
     <>
       {/* Sayfa başlığı */}
-      <section className="section-sm" style={{ backgroundColor: '#111111' }}>
+      <section className="bg-[#111111] py-10 md:py-16">
         <div className="container">
           <p
             style={{
@@ -63,16 +63,10 @@ export default function HakkimizdaPage() {
       <div className="divider" />
 
       {/* Ana metin */}
-      <section className="section" style={{ backgroundColor: '#0D0D0D' }}>
+      <section className="bg-[#0D0D0D] py-16 md:py-24">
         <div className="container">
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '4rem',
-              alignItems: 'start',
-            }}
-          >
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+
             <div>
               <h2 style={{ color: '#F0ECE4', marginBottom: '1.5rem', maxWidth: '340px' }}>
                 İşi büyütmeden çözen bir ajans.
@@ -182,7 +176,7 @@ export default function HakkimizdaPage() {
       <div className="divider" />
 
       {/* Prensipler */}
-      <section className="section" style={{ backgroundColor: '#111111' }}>
+      <section className="bg-[#111111] py-16 md:py-24">
         <div className="container">
           <p
             style={{
@@ -198,13 +192,8 @@ export default function HakkimizdaPage() {
             Yaklaşımımız
           </p>
           <h2 style={{ color: '#F0ECE4', marginBottom: '2.5rem' }}>Nasıl Çalışıyoruz</h2>
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-              gap: '16px',
-            }}
-          >
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
             {principles.map((p) => (
               <div
                 key={p.num}
@@ -258,7 +247,7 @@ export default function HakkimizdaPage() {
 
       {/* CTA */}
       <div className="divider" />
-      <section className="section-sm" style={{ backgroundColor: '#0D0D0D' }}>
+      <section className="bg-[#0D0D0D] py-10 md:py-16">
         <div className="container">
           <div
             style={{

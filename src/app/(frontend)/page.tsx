@@ -68,16 +68,9 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════
           HERO BANNER
       ══════════════════════════════════════════ */}
-      <section style={{ backgroundColor: '#0D0D0D', paddingTop: '6rem', paddingBottom: '5.5rem' }}>
+      <section className="bg-[#0D0D0D] py-16 md:py-24">
         <div className="container">
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-              gap: '3rem',
-              alignItems: 'center',
-            }}
-          >
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Sol: Metin */}
             <div>
               {/* Rozet */}
@@ -147,13 +140,7 @@ export default function HomePage() {
 
             {/* Sağ: Kolaj */}
             <div
-              style={{
-                position: 'relative',
-                height: '380px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
+              className="relative h-[320px] md:h-[380px] flex items-center justify-center mt-8 lg:mt-0"
             >
               {/* Kart 1 — arka sol */}
               <div
@@ -350,13 +337,8 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-              gap: '12px',
-            }}
-          >
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
             {services.map((s) => (
               <div
                 key={s.num}
@@ -456,13 +438,8 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
-              gap: '16px',
-            }}
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
             {featuredProjects.map((project) => (
               <div key={project.id} className="portfolio-card">
                 <div
@@ -573,14 +550,8 @@ export default function HomePage() {
       ══════════════════════════════════════════ */}
       <section className="section" style={{ backgroundColor: '#0D0D0D' }}>
         <div className="container">
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '4rem',
-              alignItems: 'start',
-            }}
-          >
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+
             <div>
               <p
                 style={{
@@ -665,14 +636,8 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════
           ALT CTA
       ══════════════════════════════════════════ */}
-      <section
-        style={{
-          backgroundColor: '#060606',
-          paddingTop: '5.5rem',
-          paddingBottom: '5.5rem',
-          borderTop: '1px solid rgba(255,255,255,0.05)',
-        }}
-      >
+      <section className="bg-[#060606] py-16 md:py-24 border-t border-white/5">
+
         <div className="container" style={{ textAlign: 'center' }}>
           <p
             style={{

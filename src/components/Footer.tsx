@@ -19,17 +19,11 @@ const services = [
 
 export default function Footer() {
   return (
-    <footer style={{ backgroundColor: '#080808', color: '#F0ECE4', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
-      <div className="container" style={{ paddingTop: '4rem', paddingBottom: '3rem' }}>
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
-            gap: '3rem',
-          }}
-        >
+    <footer className="bg-[#080808] text-[#F0ECE4] border-t border-white/5">
+      <div className="container py-12 md:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Marka */}
-          <div style={{ gridColumn: 'span 2' }}>
+          <div className="col-span-1 md:col-span-2">
             <Link href="/" aria-label="Klasik Ajans">
               <LogoKlasik variant="light" size="md" />
             </Link>
